@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfort Message</title>
+    <style>
+        :root {
+            --primary: #7D8D92;               /* Soft Grayish Blue */
+            --bg-color: #E5D8F7;              /* Soft Lavender Background */
+            --bubble-bg: #E7F4F5;             /* Soft Aqua */
+            --heart-color: #F0A9C1;           /* Soft Peachy Pink */
+            --txt-color: #4A4A4A;             /* Dark Gray */
+            --shadow-color: rgba(0, 0, 0, 0.1); /* Soft shadow */
+            --letter-text-bg: #ffffff;        /* White text background */
+            --font-family: 'Arial', sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: var(--bg-color); /* Updated to soft lavender */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .comfort-bubble {
+            position: relative;
+            background: var(--bubble-bg);
+            padding: 30px;
+            width: 60%;
+            max-width: 600px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            font-family: var(--font-family);
+        }
+        .comfort-bubble:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: var(--bubble-bg);
+            border-radius: 50%;
+            box-shadow: 0 4px 10px var(--shadow-color);
+        }
+        .comfort-bubble h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .comfort-bubble p {
+            font-size: 18px;
+            color: var(--txt-color);
+            line-height: 1.6;
+            text-align: center;
+            background-color: var(--letter-text-bg);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+        .heart {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 30px;
+            height: 30px;
+            background: var(--heart-color);
+            border-radius: 50%;
+            z-index: 2;
+            animation: heart-beat 1.5s infinite;
+        }
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: var(--heart-color);
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -15px;
+            left: 0;
+        }
+        .heart:after {
+            top: 0;
+            left: 15px;
+        }
+        @keyframes heart-beat {
+            0% {
+                transform: translateX(-50%) rotate(45deg) scale(1);
+            }
+            50% {
+                transform: translateX(-50%) rotate(45deg) scale(1.1);
+            }
+            100% {er
+                transform: translateX(-50%) rotate(45deg) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="comfort-bubble">
+            <h1>You're not alone!</h1>
+            <p>
+                Waag kana ma-saad ha, iba yung pakiramdam kapag nalalaman ko naiyak kaa ee, 
+                basta andito lang ako palagi, mag-leave kalang ng chat sakin, rereply ka agad ako hehe 
+                Proud ako sayo, everything will be okay. Surrender lang kay God kapag hindi na kaya ha?
+                I'm here for you, always in all ways. 💖
+            </p>
+            <div class="heart"></div>
+        </div>
+    </div>
+</body>
+</html>
